@@ -40,20 +40,12 @@ android {
 }
 
 dependencies {
-    implementation(libs.core.ktx)
-    implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
-    implementation(libs.appcompat)
-    implementation(libs.ui)
-    implementation(libs.ui.graphics)
-    implementation(libs.ui.tooling.preview)
-    implementation(libs.material)
-    implementation(libs.kotlinx.coroutines)
-    implementation(libs.moshi)
-    implementation(libs.retrofit)
-    implementation(libs.material3)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+    implementation(libs.bundles.androidx)
+    implementation(libs.bundles.json)
+    implementation(libs.bundles.network)
+    implementation(libs.bundles.debug)
+    implementation(libs.bundles.image)
+    implementation(libs.bundles.other)
+    implementation(libs.bundles.test)
 }

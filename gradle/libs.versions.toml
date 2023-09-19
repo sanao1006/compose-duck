@@ -9,7 +9,9 @@ lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.7.2"
 compose-bom = "2023.03.00"
 appcompat = "1.6.1"
-material = "1.9.0"
+retrofit = "2.9.0"
+moshi = "1.14.0"
+coil = "2.2.2"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -27,14 +29,71 @@ ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-retrofit = { module = "com.squareup.retrofit2:retrofit",  version = "2.9.0" }
-moshi = { module = "com.squareup.moshi:moshi",  version = "1.14.0" }
-kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core",  version = "1.7.3" }
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.7.3" }
 
+# network
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+eithernet = { module = "com.slack.eithernet:eithernet", version = "1.5.0" }
+
+# json
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi-adapters = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
+moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+
+# image loading
+coil-base = { module = "io.coil-kt:coil-base", version.ref = "coil" }
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil" }
+
+[bundles]
+androidx = [
+    "core-ktx",
+    "lifecycle-runtime-ktx",
+    "activity-compose",
+    "ui",
+    "ui-graphics",
+    "ui-tooling",
+    "material3",
+    "appcompat",
+]
+test = [
+    "junit"
+]
+network = [
+    "retrofit",
+    "retrofit-converter",
+    "eithernet"
+]
+json = [
+    "moshi",
+    "moshi-adapters",
+    "moshi-kotlin",
+    "moshi-kotlin-codegen"
+]
+image = [
+    "coil",
+    "coil-base",
+    "coil-compose",
+    "coil-gif",
+]
+debug = [
+    "ui-test-junit4",
+    "ui-test-manifest",
+    "ui-tooling-preview",
+    "androidx-test-ext-junit",
+    "espresso-core",
+]
+
+other = [
+    "kotlinx-coroutines"
+]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
+
 
