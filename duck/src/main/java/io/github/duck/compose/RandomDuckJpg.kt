@@ -1,6 +1,5 @@
 package io.github.duck.compose
 
-import android.os.Build
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,7 +15,7 @@ import coil.request.ImageRequest
 
 
 @Composable
-fun RandomDuckImage(
+fun RandomDuckJpg(
     modifier: Modifier = Modifier,
     contentDescription: String? = null,
     transform: (AsyncImagePainter.State) -> AsyncImagePainter.State = AsyncImagePainter.DefaultTransform,
