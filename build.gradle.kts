@@ -9,6 +9,12 @@ plugins {
 }
 true // Needed to make the Suppress annotation work for the plugins block
 
+tasks.register("clean") {
+    doFirst {
+        delete(rootProject.buildDir)
+    }
+}
+
 extra["signing.keyId"] = ""
 extra["signing.password"] = ""
 extra["signing.key"] = ""
