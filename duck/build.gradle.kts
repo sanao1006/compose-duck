@@ -42,8 +42,6 @@ android {
 dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.bundles.androidx)
-    implementation(libs.bundles.json)
-    implementation(libs.bundles.network)
     implementation(libs.bundles.debug)
     implementation(libs.bundles.image)
     implementation(libs.bundles.other)

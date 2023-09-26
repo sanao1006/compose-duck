@@ -9,8 +9,6 @@ lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.7.2"
 compose-bom = "2023.03.00"
 appcompat = "1.6.1"
-retrofit = "2.9.0"
-moshi = "1.14.0"
 coil = "2.2.2"
 
 [libraries]
@@ -30,17 +28,6 @@ ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.7.3" }
-
-# network
-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
-retrofit-converter = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
-eithernet = { module = "com.slack.eithernet:eithernet", version = "1.5.0" }
-
-# json
-moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
-moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
-moshi-adapters = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
-moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
 
 # image loading
 coil-base = { module = "io.coil-kt:coil-base", version.ref = "coil" }
@@ -62,17 +49,7 @@ androidx = [
 test = [
     "junit"
 ]
-network = [
-    "retrofit",
-    "retrofit-converter",
-    "eithernet"
-]
-json = [
-    "moshi",
-    "moshi-adapters",
-    "moshi-kotlin",
-    "moshi-kotlin-codegen"
-]
+
 image = [
     "coil",
     "coil-base",
