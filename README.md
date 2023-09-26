@@ -13,7 +13,7 @@ dependencies {
 ```
 # Usage
 This library provides two functions `RandomDuckJpg()` and `RandomDuckGif()`.  
-RandomDuckJpg() displays a random jpg of a duck obtained from the (Random Duck API)[https://random-d.uk/api], and RandomDuckGif() similarly displays a gif.  
+`RandomDuckJpg()` displays a random jpg of a duck obtained from the [Random Duck API](https://random-d.uk/api), and `RandomDuckGif()` similarly displays a gif.  
 
 Also, both functions wrap AsyncImage in coil. Therefore, by referring to AsyncImage, it is possible to customize the obtained image in detail.
 
