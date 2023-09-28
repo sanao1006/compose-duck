@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'io.github.sanao1006:compose-duck:0.5.0'
+  implementation 'io.github.sanao1006:compose-duck:0.5.0.2'
 }
 ```
 # Usage
